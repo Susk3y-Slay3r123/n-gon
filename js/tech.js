@@ -330,11 +330,11 @@ const tech = {
     },
     {
         name: "nitinol",
-        description: "<strong>1.3x</strong> <strong>movement</strong> and <strong>jumping</strong><br><strong>0.8x</strong> <strong class='color-defense'>damage taken</strong>",
-        maxCount: 1,
+        description: "<strong>1.3x</strong> <strong>movement</strong> and <strong>jumping</strong><br><strong>2.5x</strong> <strong class='color-defense'>damage taken</strong>",
+        maxCount: 10,
         count: 0,
-        frequency: 1,
-        frequencyDefault: 1,
+        frequency: 100,
+        frequencyDefault: 100,
         isSkin: true,
         allowed() {
             return !m.isAltSkin
@@ -843,11 +843,11 @@ const tech = {
         descriptionFunction() {
             return `spawn a <strong class='color-g'>gun</strong><br>spawn ${powerUps.orb.ammo(1)} equal to current <strong class='color-ammo'>ammo</strong>`
         },
-        maxCount: 9,
+        maxCount: 20,
         count: 0,
         isInstant: true,
-        frequency: 1,
-        frequencyDefault: 1,
+        frequency: 100,
+        frequencyDefault: 100,
         allowed() {
             return true
         },
@@ -954,11 +954,11 @@ const tech = {
     },
     {
         name: "logistics",
-        description: `<strong>2x</strong> <strong class='color-ammo'>ammo</strong> per ${powerUps.orb.ammo()}, but<br><strong class='color-ammo'>ammo</strong> is only added to your current <strong class='color-g'>gun</strong>`,
-        maxCount: 1,
+        description: `<strong>50x</strong> <strong class='color-ammo'>ammo</strong> per ${powerUps.orb.ammo()}, but<br><strong class='color-ammo'>ammo</strong> is only added to your current <strong class='color-g'>gun</strong>`,
+        maxCount: 10,
         count: 0,
-        frequency: 1,
-        frequencyDefault: 1,
+        frequency: 100,
+        frequencyDefault: 100,
         allowed() {
             return !tech.isEnergyNoAmmo
         },
@@ -1884,10 +1884,10 @@ const tech = {
         name: "orbital-bot",
         link: `<a target="_blank" href='https://en.wikipedia.org/wiki/Robot' class="link">orbital-bot</a>`,
         description: "a <strong class='color-bot'>bot</strong> is locked in <strong>orbit</strong> around you<br><strong>stuns</strong> and <strong class='color-d'>damages</strong> mobs on <strong>contact</strong>",
-        maxCount: 9,
+        maxCount: 999999,
         count: 0,
-        frequency: 1,
-        frequencyDefault: 1,
+        frequency: 10,
+        frequencyDefault: 10,
         isBot: true,
         isBotTech: true,
         allowed() {
